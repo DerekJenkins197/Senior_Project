@@ -1,8 +1,8 @@
-PWD c:/Senior_Project/Final Proposal
+PWD c:/Users/Derek/Desktop/School/Senior_Project/Senior_Project/Final Proposal
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Senior_Project/Final Proposal/Main.tex
+INPUT c:/Users/Derek/Desktop/School/Senior_Project/Senior_Project/Final Proposal/Main.tex
 OUTPUT Main.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
@@ -141,11 +141,14 @@ INPUT ./Main.aux
 INPUT ./Main.aux
 INPUT Main.aux
 OUTPUT Main.aux
-OUTPUT Main.out
+INPUT ./Main.out
+INPUT ./Main.out
+INPUT Main.out
+INPUT Main.out
 OUTPUT Main.pdf
-INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT ./Main.out
+INPUT ./Main.out
+OUTPUT Main.out
 INPUT c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
@@ -209,24 +212,6 @@ INPUT tex_files/Integration_Strategy.tex
 INPUT ./tex_files/Risk_Assesment.tex
 INPUT ./tex_files/Risk_Assesment.tex
 INPUT tex_files/Risk_Assesment.tex
-INPUT ./tex_files/Conclusion.tex
-INPUT ./tex_files/Conclusion.tex
-INPUT tex_files/Conclusion.tex
-INPUT ./Main.bbl
-INPUT ./Main.bbl
-INPUT Main.bbl
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -245,6 +230,26 @@ INPUT c:/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
+INPUT c:/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./tex_files/Conclusion.tex
+INPUT ./tex_files/Conclusion.tex
+INPUT tex_files/Conclusion.tex
+INPUT ./Main.bbl
+INPUT ./Main.bbl
+INPUT Main.bbl
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf

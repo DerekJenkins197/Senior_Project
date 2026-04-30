@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.30)  30 APR 2026 13:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.30)  30 APR 2026 13:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Senior_Project/Final Proposal/Main.tex"
-(c:/Senior_Project/Final Proposal/Main.tex
+**"c:/Users/Derek/Desktop/School/Senior_Project/Senior_Project/Final Proposal/Main.tex"
+(c:/Users/Derek/Desktop/School/Senior_Project/Senior_Project/Final Proposal/Main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
 (c:/texlive/2026/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
@@ -327,23 +327,11 @@ LaTeX Font Info:    ... okay on input line 115.
 
 -- Lines per column: 52 (exact).
 Package hyperref Info: Link coloring OFF on input line 115.
+(./Main.out) (./Main.out)
 \@outlinefile=\write3
 \openout3 = `Main.out'.
 
-(c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count315
-\scratchdimen=\dimen189
-\scratchbox=\box57
-\nofMPsegments=\count316
-\nofMParguments=\count317
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count318
-\MPscratchDim=\dimen190
-\MPnumerator=\count319
-\makeMPintoPDFobject=\count320
-\everyMPtoPDFconversion=\toks25
-) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+ (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
@@ -358,10 +346,10 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 197.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./tex_files/Problem_Statement.tex) (./tex_files/Solution_Space.tex) (./tex_files/Related_Work.tex) (./tex_files/Solution_Contribution.tex) (./tex_files/Ethical_Considerations.tex) (./tex_files/Proposed_Work.tex) (./tex_files/Project_Tasks.tex
 LaTeX Font Info:    Calculating math sizes for size <11> on input line 7.
-) (./tex_files/Integration_Strategy.tex) (./tex_files/Risk_Assesment.tex) (./tex_files/Conclusion.tex) (./Main.bbl [1{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}
+) (./tex_files/Integration_Strategy.tex) (./tex_files/Risk_Assesment.tex) [1{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
-]
+] (./tex_files/Conclusion.tex) (./Main.bbl
 ./Main.bbl:40: Undefined control sequence.
 l.40 O.~Patashnik. (1988, Feb.) {{\BibTeX
                                          }}ing. {btxdoc.pdf}. [Online]. Avai...
@@ -407,12 +395,12 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
+[2]
 Underfull \hbox (badness 1769) in paragraph at lines 175--176
 \OT1/ptm/m/n/9 single-channel trans-mis-sion over 300 km nonzero-
  []
 
-[2]
+
 Underfull \hbox (badness 1546) in paragraph at lines 184--185
 []\OT1/ptm/m/n/9 A. Karnik, ``Per-for-mance of TCP con-ges-tion con-
  []
@@ -474,30 +462,27 @@ L3 programming layer <2026-03-20>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
 Package rerunfilecheck Warning: File `Main.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `Main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  BE41491737E01C935F99A3CE2B28C127;1491.
+(rerunfilecheck)             Before: B3A51C640E8AEE4F9EE43CE6A60EEB3C;4244
+(rerunfilecheck)             After:  D6D8B444B1302B9BA3DE2F7596464508;2720.
  ) 
 Here is how much of TeX's memory you used:
- 10908 strings out of 467349
- 172648 string characters out of 5419862
- 601901 words of memory out of 5000000
- 39709 multiletter control sequences out of 15000+600000
- 668954 words of font info for 125 fonts, out of 8000000 for 9000
+ 10642 strings out of 467349
+ 169295 string characters out of 5419862
+ 606585 words of memory out of 5000000
+ 39434 multiletter control sequences out of 15000+600000
+ 670090 words of font info for 126 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 75i,6n,79p,550b,581s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,592b,583s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Main.pdf (4 pages, 102324 bytes).
+Output written on Main.pdf (4 pages, 104760 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 251 compressed objects within 3 object streams
- 125 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 356 compressed objects within 4 object streams
+ 134 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 
