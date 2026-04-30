@@ -137,9 +137,18 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsxtra.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsxtra.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT ./Main.aux
+INPUT ./Main.aux
+INPUT Main.aux
 OUTPUT Main.aux
-OUTPUT Main.out
+INPUT ./Main.out
+INPUT ./Main.out
+INPUT Main.out
+INPUT Main.out
 OUTPUT Main.pdf
+INPUT ./Main.out
+INPUT ./Main.out
+OUTPUT Main.out
 INPUT c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
@@ -161,41 +170,27 @@ INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
-INPUT ./Problem Statement/Problem_Statement.tex
-INPUT ./Problem Statement/Problem_Statement.tex
-INPUT ./Problem Statement/Problem_Statement.tex
-INPUT ./Problem Statement/Problem_Statement.tex
-INPUT Problem Statement/Problem_Statement.tex
-INPUT ./Solution Space/Solution_Space.tex
-INPUT ./Solution Space/Solution_Space.tex
-INPUT ./Solution Space/Solution_Space.tex
-INPUT ./Solution Space/Solution_Space.tex
-INPUT Solution Space/Solution_Space.tex
-INPUT ./Related Work/Related_Work.tex
-INPUT ./Related Work/Related_Work.tex
-INPUT ./Related Work/Related_Work.tex
-INPUT ./Related Work/Related_Work.tex
-INPUT Related Work/Related_Work.tex
-INPUT ./Solution_Contribution/Solution_Contribution.tex
-INPUT ./Solution_Contribution/Solution_Contribution.tex
-INPUT ./Solution_Contribution/Solution_Contribution.tex
-INPUT ./Solution_Contribution/Solution_Contribution.tex
-INPUT Solution_Contribution/Solution_Contribution.tex
-INPUT ./Safety, Global Considerations/Ethical_Considerations.tex
-INPUT ./Safety, Global Considerations/Ethical_Considerations.tex
-INPUT ./Safety, Global Considerations/Ethical_Considerations.tex
-INPUT ./Safety, Global Considerations/Ethical_Considerations.tex
-INPUT Safety, Global Considerations/Ethical_Considerations.tex
-INPUT ./Proposed Work/Proposed_Work.tex
-INPUT ./Proposed Work/Proposed_Work.tex
-INPUT ./Proposed Work/Proposed_Work.tex
-INPUT ./Proposed Work/Proposed_Work.tex
-INPUT Proposed Work/Proposed_Work.tex
-INPUT ./Project Tasks/Project_Tasks.tex
-INPUT ./Project Tasks/Project_Tasks.tex
-INPUT ./Project Tasks/Project_Tasks.tex
-INPUT ./Project Tasks/Project_Tasks.tex
-INPUT Project Tasks/Project_Tasks.tex
+INPUT ./tex_files/Problem_Statement.tex
+INPUT ./tex_files/Problem_Statement.tex
+INPUT tex_files/Problem_Statement.tex
+INPUT ./tex_files/Solution_Space.tex
+INPUT ./tex_files/Solution_Space.tex
+INPUT tex_files/Solution_Space.tex
+INPUT ./tex_files/Related_Work.tex
+INPUT ./tex_files/Related_Work.tex
+INPUT tex_files/Related_Work.tex
+INPUT ./tex_files/Solution_Contribution.tex
+INPUT ./tex_files/Solution_Contribution.tex
+INPUT tex_files/Solution_Contribution.tex
+INPUT ./tex_files/Ethical_Considerations.tex
+INPUT ./tex_files/Ethical_Considerations.tex
+INPUT tex_files/Ethical_Considerations.tex
+INPUT ./tex_files/Proposed_Work.tex
+INPUT ./tex_files/Proposed_Work.tex
+INPUT tex_files/Proposed_Work.tex
+INPUT ./tex_files/Project_Tasks.tex
+INPUT ./tex_files/Project_Tasks.tex
+INPUT tex_files/Project_Tasks.tex
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -211,16 +206,12 @@ INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT ./Integration Strategy/Integration_Strategy.tex
-INPUT ./Integration Strategy/Integration_Strategy.tex
-INPUT ./Integration Strategy/Integration_Strategy.tex
-INPUT ./Integration Strategy/Integration_Strategy.tex
-INPUT Integration Strategy/Integration_Strategy.tex
-INPUT ./Risk Assesment/Risk_Assesment.tex
-INPUT ./Risk Assesment/Risk_Assesment.tex
-INPUT ./Risk Assesment/Risk_Assesment.tex
-INPUT ./Risk Assesment/Risk_Assesment.tex
-INPUT Risk Assesment/Risk_Assesment.tex
+INPUT ./tex_files/Integration_Strategy.tex
+INPUT ./tex_files/Integration_Strategy.tex
+INPUT tex_files/Integration_Strategy.tex
+INPUT ./tex_files/Risk_Assesment.tex
+INPUT ./tex_files/Risk_Assesment.tex
+INPUT tex_files/Risk_Assesment.tex
 INPUT c:/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -241,11 +232,9 @@ INPUT c:/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT c:/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
-INPUT ./Conclusion/Conclusion.tex
-INPUT ./Conclusion/Conclusion.tex
-INPUT ./Conclusion/Conclusion.tex
-INPUT ./Conclusion/Conclusion.tex
-INPUT Conclusion/Conclusion.tex
+INPUT ./tex_files/Conclusion.tex
+INPUT ./tex_files/Conclusion.tex
+INPUT tex_files/Conclusion.tex
 INPUT ./Main.bbl
 INPUT ./Main.bbl
 INPUT Main.bbl
