@@ -1,6 +1,54 @@
+Solution Space
 
+Efforts to improve firearm safety through access control have evolved through several distinct technological approaches. 
+At the most basic level, traditional solutions rely on purely mechanical safeguards such as trigger locks or integrated 
+key-based locking mechanisms. These systems are inexpensive and highly reliable because they do not depend on electronics 
+or power, but they fundamentally lack user-specific authentication. Anyone with access to the key or combination can operate 
+the firearm, which causes concern toward illegitimate use. In time-sensitive or high-stress situations, the need to manually 
+unlock a device with a key can render the safety ineffective in practice, leading many police and military personnel to avoid
+using such systems altogether. This creates a gap between theoretical safety and real-world adoption, motivating the development 
+of systems that can enforce access control without requiring manual, non-instantaneous intervention.
 
+Electronic authentication methods represent the next step in this progression. Systems based on PIN entry, external key fobs,
+or smartphone connectivity attempt to introduce user-specific control while maintaining relatively simple hardware implementations.
+While these approaches improve upon mechanical systems by enabling programmable access, they still require explicit interaction
+from the user, such as entering a code or activating a device. This introduces latency and cognitive load that can be unacceptable
+in defensive scenarios. Additionally, wireless-based systems may be vulnerable to interception or spoofing, depending on 
+their implementation. As a result, these approaches highlight the need for authentication mechanisms that are both secure 
+and implicit, allowing the system to verify the user seamlessly without requiring conscious action.
 
+Biometric authentication has emerged as the most prominent alternative in this space, particularly in commercial “smart gun” 
+designs. By leveraging physiological traits such as fingerprints, palm vein patterns, or even grip characteristics, biometric 
+systems aim to bind firearm operation directly to the identity of the user. This approach is compelling because it eliminates 
+the need for external tokens and, in principle, ensures that only authorized individuals can operate the weapon. However, when 
+examined in the context of real-world firearm use, biometrics introduce a number of critical challenges. Sensors such as 
+fingerprint scanners are highly sensitive to environmental conditions; dirt, sweat, gloves, or moisture can significantly 
+degrade performance. Firearms are often used in unpredictable and harsh environments, where such conditions are common, leading
+to an increased likelihood of authentication failure.
 
-What are some approaches that people have taken to solve this problem?
-Sometimes an approach someone has taken then introduces new problems. So the description of the problem and solution take a problem -> solution -> problem -> solution -> ... format.
+Latency is another major concern. Biometric systems require time to capture, process, and match data against stored templates. 
+Even small delays can be unacceptable in scenarios where immediate response is necessary. Equally important is the issue of 
+reliability in terms of false negatives and false positives. A false negative, where an authorized user is denied access, represents
+a potentially dangerous failure mode in a defensive situation. Conversely, a false positive undermines the entire purpose of the
+system. These risks are compounded by the long-term degradation of sensors and the variability of human biological signals. In 
+addition to these technical concerns, biometric systems tend to be significantly more expensive and power-intensive than 
+alternative solutions. Commercial implementations often cost on the order of $1000 to $1500, reflecting the complexity of 
+integrating sensors, processing hardware, and secure storage into a compact and durable platform. This cost and power burden 
+conflicts directly with the constraints of a small, battery-powered module designed to fit within the firing control group of an
+AR-15.
+
+RFID-based authentication offers a different point in the design space by prioritizing simplicity, robustness, and low power 
+consumption. In a passive near-field RFID system, authentication occurs when a tag enters the electromagnetic field generated 
+by a reader, allowing the tag to transmit its unique identifier without requiring its own power source. This enables extremely 
+low-latency operation and reduces the system’s overall energy requirements. RFID systems are also less sensitive to environmental 
+contaminants compared to optical or capacitive biometric sensors, making them more reliable in varied conditions. The primary 
+tradeoff is that RFID relies on possession rather than inherent identity; a user must carry an external token, such as a ring or 
+card, which introduces the possibility of loss or unauthorized use if the token is compromised.
+
+More complex hybrid systems attempt to combine multiple authentication methods, such as pairing RFID with biometrics or behavioral 
+sensing, in order to improve security. While these approaches can reduce certain vulnerabilities, they significantly increase system 
+complexity, cost, and power consumption. For a compact, retrofittable module operating under strict physical and electrical 
+constraints, such complexity may be impractical. As a result, the solution space reflects a series of tradeoffs between security, 
+reliability, usability, and feasibility. Biometric systems offer strong identity assurance but struggle with robustness and cost, 
+while RFID systems sacrifice some degree of identity binding in exchange for speed, reliability, and practicality. This balance 
+makes RFID a compelling candidate for a system intended to be compact, cost-effective, and deployable in real-world conditions.
