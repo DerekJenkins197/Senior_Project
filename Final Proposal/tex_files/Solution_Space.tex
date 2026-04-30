@@ -31,22 +31,21 @@ a potentially dangerous failure in a defensive situation. Conversely, a false po
 system. These risks are compounded by the long-term degradation of sensors and the variability of human biological signals. In 
 addition to these technical concerns, biometric systems tend to be significantly more expensive and power-intensive than 
 alternative solutions. Commercial implementations often cost on the order of \$1000 to \$1500, reflecting the complexity of 
-integrating sensors, processing hardware, and secure storage into a compact and durable platform. This cost and power burden 
-conflicts directly with the constraints of a small, battery-powered module designed to fit within the firing control group of an
-AR-15.
+most biometric devices. This cost and power burden conflicts directly with the constraints of a small, battery-powered module designed 
+to fit within the firing control group of an AR-15.
 
 RFID-based authentication offers a different point in the design space by prioritizing simplicity, robustness, and low power 
 consumption. In a passive near-field RFID system, authentication occurs when a tag enters the electromagnetic field generated 
 by a reader, allowing the tag to transmit its unique identifier without requiring its own power source. This enables extremely 
 low-latency operation and reduces the system's overall energy requirements. RFID systems are also less sensitive to environmental 
 contaminants compared to optical or capacitive biometric sensors, making them more reliable in varied conditions. The primary 
-tradeoff is that RFID relies on possession rather than inherent identity; a user must carry an external token, such as a ring or 
+tradeoff is that RFID relies on possession rather than inherent identity. A user must carry an external token, such as a ring or 
 card, which introduces the possibility of loss or unauthorized use if the token is compromised.
 
 More complex hybrid systems attempt to combine multiple authentication methods, such as pairing RFID with biometrics or behavioral 
 sensing, in order to improve security. While these approaches can reduce certain vulnerabilities, they significantly increase system 
 complexity, cost, and power consumption. For a compact, retrofittable module operating under strict physical and electrical 
-constraints, such complexity may be impractical. As a result, the solution space reflects a series of tradeoffs between security, 
+constraints, this hybrid complexity is impractical. As a result, the solution space reflects a series of tradeoffs between security, 
 reliability, usability, and feasibility. Biometric systems offer strong identity assurance but struggle with robustness and cost, 
 while RFID systems sacrifice some degree of identity binding in exchange for speed, reliability, and practicality. This balance 
 makes RFID a compelling candidate for a system intended to be compact, cost-effective, and deployable in real-world conditions.
