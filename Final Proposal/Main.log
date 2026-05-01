@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.29)  1 MAY 2026 13:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.29)  1 MAY 2026 13:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -211,7 +211,14 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
  (c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-) (c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count302
+\float@exts=\toks19
+\float@box=\box55
+\@float@everytoks=\toks20
+\@floatcapt=\box56
+) (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
@@ -233,7 +240,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2024/11/17 v2.01 AMS text
  (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks19
+\@emptytoks=\toks21
 \ex@=\dimen178
 )) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -241,19 +248,19 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count302
+\inf@bad=\count303
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count303
-\leftroot@=\count304
+\uproot@=\count304
+\leftroot@=\count305
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count305
-\DOTSCASE@=\count306
+\classnum@=\count306
+\DOTSCASE@=\count307
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box55
-\strutbox@=\box56
+\Mathstrutbox@=\box57
+\strutbox@=\box58
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
@@ -261,31 +268,31 @@ LaTeX Info: Redefining \Bigg on input line 724.
 \big@size=\dimen180
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count307
+\macc@depth=\count308
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count308
+\c@MaxMatrixCols=\count309
 \dotsspace@=\muskip18
-\c@parentequation=\count309
-\dspbrk@lvl=\count310
-\tag@help=\toks20
-\row@=\count311
-\column@=\count312
-\maxfields@=\count313
-\andhelp@=\toks21
+\c@parentequation=\count310
+\dspbrk@lvl=\count311
+\tag@help=\toks22
+\row@=\count312
+\column@=\count313
+\maxfields@=\count314
+\andhelp@=\toks23
 \eqnshift@=\dimen181
 \alignsep@=\dimen182
 \tagshift@=\dimen183
 \tagwidth@=\dimen184
 \totwidth@=\dimen185
 \lineht@=\dimen186
-\@envbody=\toks22
+\@envbody=\toks24
 \multlinegap=\skip54
 \multlinetaggap=\skip55
-\mathdisplay@stack=\toks23
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2949.
 LaTeX Info: Redefining \] on input line 2950.
 ) (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
@@ -302,168 +309,214 @@ Package: amsxtra 1999/11/15 v1.2c AMS extra commands
 LaTeX Info: Redefining \nobreakspace on input line 54.
 ) (c:/texlive/2025/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
+) (c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+LaTeX Info: Redefining \color on input line 762.
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (c:/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+ (c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+\col@sep=\dimen187
+\ar@mcellbox=\box59
+\extrarowheight=\dimen188
+\NC@list=\toks26
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box60
+)
+\everycr=\toks27
+\minrowclearance=\skip58
+\rownum=\count315
 ) (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count314
-) (./Main.aux)
+\l__color_backend_stack_int=\count316
+)
+No file Main.aux.
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
 -- Lines per column: 52 (exact).
-Package hyperref Info: Link coloring OFF on input line 116.
-(./Main.out) (./Main.out)
+Package hyperref Info: Link coloring OFF on input line 118.
 \@outlinefile=\write3
 \openout3 = `Main.out'.
 
- (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count315
-\scratchdimen=\dimen187
-\scratchbox=\box57
-\nofMPsegments=\count316
-\nofMParguments=\count317
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count318
-\MPscratchDim=\dimen188
-\MPnumerator=\count319
-\makeMPintoPDFobject=\count320
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count317
+\scratchdimen=\dimen189
+\scratchbox=\box61
+\nofMPsegments=\count318
+\nofMParguments=\count319
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count320
+\MPscratchDim=\dimen190
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
+\everyMPtoPDFconversion=\toks29
 ) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 198.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 205.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 198.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 205.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./tex_files/Problem_Statement.tex) (./tex_files/Solution_Space.tex
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 33.
-(c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
+
 
 [1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
-]) (./tex_files/Related_Work.tex) (./tex_files/Solution_Contribution.tex) (./tex_files/Ethical_Considerations.tex
+]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 33.
+ (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+))
 
-) (./tex_files/Proposed_Work.tex) (./tex_files/Project_Tasks.tex
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 7.
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
-
- []
-
-) (./tex_files/Integration_Strategy.tex) (./tex_files/Risk_Assesment.tex
-
-[2]
-Underfull \hbox (badness 3758) in paragraph at lines 32--33
-[]\OT1/ptm/b/n/11 Safety/Legal (Ini-tially Red): \OT1/ptm/m/n/11 Bring-ing a
- []
-
-
-Underfull \hbox (badness 1400) in paragraph at lines 33--34
-[]\OT1/ptm/b/n/11 Operational (Ini-tially Yel-low): \OT1/ptm/m/n/11 In-ad-e-quate
- []
-
-)
-Underfull \hbox (badness 3158) in paragraph at lines 46--229
-[]\OT1/ptm/m/n/11 With these mit-i-ga-tion strate-gies fi-nal-ized, the
- []
-
-
-
-(./tex_files/Conclusion.tex) (./Main.bbl
-
-[3]
-
-
-Underfull \hbox (badness 1769) in paragraph at lines 175--176
-\OT1/ptm/m/n/9 single-channel trans-mis-sion over 300 km nonzero-
- []
-
-
-Underfull \hbox (badness 1546) in paragraph at lines 184--185
-[]\OT1/ptm/m/n/9 A. Karnik, ``Per-for-mance of TCP con-ges-tion con-
- []
-
-
-Underfull \hbox (badness 1735) in paragraph at lines 237--238
-[]\OT1/ptm/m/it/9 Fiber Chan-nel Phys-i-cal In-ter-face (FC-PI)\OT1/ptm/m/n/9 , NCITS
- []
-
-
-
-[4]
-Underfull \hbox (badness 7631) in paragraph at lines 258--259
-[]\OT1/ptm/m/it/9 SaberDesigner Ref-er-ence Man-ual\OT1/ptm/m/n/9 , Anal-ogy, Inc.,
- []
-
-
-
-
-
-[5]
-Underfull \hbox (badness 1803) in paragraph at lines 413--414
-[]\OT1/ptm/m/n/9 P. Pinies, J. D. Tar-dos, and J. Neira, ``Lo-cal-iza-
+(./tex_files/Related_Work.tex
+Underfull \hbox (badness 3049) in paragraph at lines 1--2
+[]\OT1/ptm/m/n/11 Radio fre-quency iden-ti-fi-ca-tion (RFID) has been
  []
 
 )
 
+[2] (./tex_files/Solution_Contribution.tex) (./tex_files/Ethical_Considerations.tex
+
+LaTeX Warning: Reference `MechFSD' on page 3 undefined on input line 20.
 
 
-[6
+
+
+LaTeX Warning: Citation `devices2013personalized' on page 3 undefined on input line 22.
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 24.
+<../Figures/Mech_FSD.png, id=20, 582.67688pt x 243.15843pt>
+File: ../Figures/Mech_FSD.png Graphic file (type png)
+<use ../Figures/Mech_FSD.png>
+Package pdftex.def Info: ../Figures/Mech_FSD.png  used on input line 33.
+(pdftex.def)             Requested size: 258.0pt x 107.66902pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 33--34
+ [][] 
+ []
+
+
+
+[3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.47     \item
+               Maryland (SB 334/HB 1339) This law requires that all firearms... <../Figures/Mech_FSD.png>]
+
+./tex_files/Ethical_Considerations.tex:49: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49     \item N
+                ew Jersey's "Display Mandate": This law requires that all fi...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (38.21162pt too wide) in paragraph at lines 70--83
+[][] 
+ []
+
+
+Underfull \vbox (badness 7238) has occurred while \output is active []
+
+
+
+) (./tex_files/Proposed_Work.tex
+
+[4]) (./tex_files/Project_Tasks.tex
+
+) (./tex_files/Integration_Strategy.tex)
+
+[5] (./tex_files/Risk_Assesment.tex
+
+) (./tex_files/Conclusion.tex)
+
+[6] (./Main.bbl
+
+)
+
+[7
 
 ] (./Main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: D6D8B444B1302B9BA3DE2F7596464508;2720.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `Main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  3981A4EA49FAE79F779D260BEE0BEA75;3626.
  ) 
 Here is how much of TeX's memory you used:
- 10952 strings out of 467800
- 172429 string characters out of 5436055
- 614526 words of memory out of 5000000
- 39286 multiletter control sequences out of 15000+600000
- 670615 words of font info for 128 fonts, out of 8000000 for 9000
+ 11474 strings out of 467800
+ 178408 string characters out of 5436055
+ 621152 words of memory out of 5000000
+ 39853 multiletter control sequences out of 15000+600000
+ 673483 words of font info for 132 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 75i,6n,79p,633b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Main.pdf (6 pages, 115387 bytes).
+ 75i,10n,79p,1077b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Main.pdf (7 pages, 360444 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 332 compressed objects within 4 object streams
- 136 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
