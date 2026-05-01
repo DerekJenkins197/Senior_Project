@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.30)  30 APR 2026 23:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.30)  30 APR 2026 23:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -344,7 +344,8 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 ) (c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count316
-) (./Main.aux)
+)
+No file Main.aux.
 \openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
@@ -365,7 +366,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
 LaTeX Font Info:    ... okay on input line 118.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 118.
 LaTeX Font Info:    ... okay on input line 118.
-
 -- Lines per column: 52 (exact).
 Package hyperref Info: Link coloring OFF on input line 118.
 \@outlinefile=\write3
@@ -391,15 +391,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 33.
  (c:/texlive/2026/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)) (./tex_files/Related_Work.tex) (./tex_files/Solution_Contribution.tex) (./tex_files/Ethical_Considerations.tex
+)) (./tex_files/Related_Work.tex
+Underfull \hbox (badness 3049) in paragraph at lines 1--2
+[]\OT1/ptm/m/n/11 Radio fre-quency iden-ti-fi-ca-tion (RFID) has been
+ []
 
-LaTeX Warning: Reference `MechFSD' on page 2 undefined on input line 20.
+) [2] (./tex_files/Solution_Contribution.tex) (./tex_files/Ethical_Considerations.tex
+
+LaTeX Warning: Reference `MechFSD' on page 3 undefined on input line 20.
 
 
-LaTeX Warning: Citation `devices2013personalized' on page 2 undefined on input line 22.
+LaTeX Warning: Citation `devices2013personalized' on page 3 undefined on input line 22.
 
 LaTeX Font Info:    Calculating math sizes for size <11> on input line 24.
-<../Figures/Mech_FSD.png, id=14, 582.67688pt x 243.15843pt>
+<../Figures/Mech_FSD.png, id=20, 582.67688pt x 243.15843pt>
 File: ../Figures/Mech_FSD.png Graphic file (type png)
 <use ../Figures/Mech_FSD.png>
 Package pdftex.def Info: ../Figures/Mech_FSD.png  used on input line 33.
@@ -409,7 +414,12 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 33--34
  [][] 
  []
 
-[2]
+[3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.47     \item
+               Maryland (SB 334/HB 1339) This law requires that all firearms... <../Figures/Mech_FSD.png>]
 
 ./tex_files/Ethical_Considerations.tex:49: LaTeX Error: Something's wrong--perhaps a missing \item.
 
@@ -427,22 +437,12 @@ Overfull \hbox (38.21162pt too wide) in paragraph at lines 70--83
 [][] 
  []
 
-[3
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.99 
-      <../Figures/Mech_FSD.png>]) (./tex_files/Proposed_Work.tex) (./tex_files/Project_Tasks.tex
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
 
- []
+Underfull \vbox (badness 7238) has occurred while \output is active []
 
+) (./tex_files/Proposed_Work.tex [4]) (./tex_files/Project_Tasks.tex) (./tex_files/Integration_Strategy.tex) [5] (./tex_files/Risk_Assesment.tex) (./tex_files/Conclusion.tex) [6
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
-
- []
-
-) (./tex_files/Integration_Strategy.tex) (./tex_files/Risk_Assesment.tex) (./tex_files/Conclusion.tex) (./Main.bbl) [4] (./Main.aux)
+] (./Main.bbl) (./Main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -461,21 +461,21 @@ Package rerunfilecheck Warning: File `Main.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `Main.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  211E78D8D124CE8632F503B2400A1C4C;2506.
+(rerunfilecheck)             After:  35D3752E989893CDE1AD5CA89613CD2D;3531.
  ) 
 Here is how much of TeX's memory you used:
- 11120 strings out of 467349
- 174371 string characters out of 5419862
- 607018 words of memory out of 5000000
- 39996 multiletter control sequences out of 15000+600000
- 670464 words of font info for 128 fonts, out of 8000000 for 9000
+ 11128 strings out of 467349
+ 174463 string characters out of 5419862
+ 607027 words of memory out of 5000000
+ 39995 multiletter control sequences out of 15000+600000
+ 671600 words of font info for 129 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 75i,10n,83p,428b,449s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,83p,1073b,526s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Main.pdf (4 pages, 329608 bytes).
+Output written on Main.pdf (6 pages, 337572 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
+ 36 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
