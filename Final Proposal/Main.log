@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.29)  1 MAY 2026 13:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.29)  1 MAY 2026 15:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -344,8 +344,7 @@ Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
 ) (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count316
-)
-No file Main.aux.
+) (./Main.aux)
 \openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
@@ -366,12 +365,14 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
 LaTeX Font Info:    ... okay on input line 118.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 118.
 LaTeX Font Info:    ... okay on input line 118.
+
 -- Lines per column: 52 (exact).
 Package hyperref Info: Link coloring OFF on input line 118.
+(./Main.out) (./Main.out)
 \@outlinefile=\write3
 \openout3 = `Main.out'.
 
-(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count317
 \scratchdimen=\dimen189
@@ -419,15 +420,8 @@ Underfull \hbox (badness 3049) in paragraph at lines 1--2
 
 [2] (./tex_files/Solution_Contribution.tex) (./tex_files/Ethical_Considerations.tex
 
-LaTeX Warning: Reference `MechFSD' on page 3 undefined on input line 20.
-
-
-
-
-LaTeX Warning: Citation `devices2013personalized' on page 3 undefined on input line 22.
-
 LaTeX Font Info:    Calculating math sizes for size <11> on input line 24.
-<../Figures/Mech_FSD.png, id=20, 582.67688pt x 243.15843pt>
+<../Figures/Mech_FSD.png, id=115, 582.67688pt x 243.15843pt>
 File: ../Figures/Mech_FSD.png Graphic file (type png)
 <use ../Figures/Mech_FSD.png>
 Package pdftex.def Info: ../Figures/Mech_FSD.png  used on input line 33.
@@ -445,25 +439,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has
                                                   \__shipout_drop_firstpage_...
 l.47     \item
                Maryland (SB 334/HB 1339) This law requires that all firearms... <../Figures/Mech_FSD.png>]
-
-./tex_files/Ethical_Considerations.tex:49: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49     \item N
-                ew Jersey's "Display Mandate": This law requires that all fi...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (38.21162pt too wide) in paragraph at lines 70--83
+Overfull \hbox (38.21162pt too wide) in paragraph at lines 69--82
 [][] 
  []
 
 
-Underfull \vbox (badness 7238) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -471,52 +452,44 @@ Underfull \vbox (badness 7238) has occurred while \output is active []
 
 [4]) (./tex_files/Project_Tasks.tex
 
-) (./tex_files/Integration_Strategy.tex)
 
-[5] (./tex_files/Risk_Assesment.tex
+
+[5]) (./tex_files/Integration_Strategy.tex
+
+) (./tex_files/Risk_Assesment.tex
+
+[6]
 
 ) (./tex_files/Conclusion.tex)
 
-[6] (./Main.bbl
+[7] (./Main.bbl)
 
-)
 
-[7
+
+[8
+
 
 ] (./Main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3981A4EA49FAE79F779D260BEE0BEA75;3626.
+Package rerunfilecheck Info: File `Main.out' has not changed.
+(rerunfilecheck)             Checksum: CAD0DBDE92CA44FD03D1876CCB5382E6;3543.
  ) 
 Here is how much of TeX's memory you used:
- 11474 strings out of 467800
- 178408 string characters out of 5436055
- 621152 words of memory out of 5000000
- 39853 multiletter control sequences out of 15000+600000
- 673483 words of font info for 132 fonts, out of 8000000 for 9000
+ 11425 strings out of 467800
+ 177226 string characters out of 5436055
+ 599320 words of memory out of 5000000
+ 39838 multiletter control sequences out of 15000+600000
+ 670704 words of font info for 129 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  75i,10n,79p,1077b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Main.pdf (7 pages, 360444 bytes).
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Main.pdf (8 pages, 348190 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 75 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 198 words of extra memory for PDF output out of 10000 (max. 10000000)
 
