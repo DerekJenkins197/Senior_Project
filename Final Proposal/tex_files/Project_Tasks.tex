@@ -1,16 +1,92 @@
+\subsection{Major Milestones}
+
+\begin{itemize}
+\item Planning:
+    \begin{itemize}
+    \item Full bill of matierals made
+    \item Major research complete
+    \item Safety pre\-cautions addressed
+    \item Due: \textit{03 Aug 2026}
+    \end{itemize}
+\item Functional RFID reader:
+    \begin{itemize}
+    \item Able to read and log tags
+    \item Exportable log
+    \item Due: \textit{24 Aug 2026}
+    \end{itemize}
+\item Application for updating authorized tags:
+    \begin{itemize}
+    \item User able to update authorized tags without reflashing
+    \item Due: \textit{04 Sep 2026}
+    \end{itemize}
+\item Successful blocking of fire control:
+    \begin{itemize}
+    \item Method of blocking the firing of the AR-15 solidified and location confirmed
+    \item Due: \textit{11 Sep 2026}
+    \end{itemize}
+\item Part fitting:
+    \begin{itemize}
+    \item Adapting all components into the small form factor required by constraints
+    \item Due: \textit{02 Oct 2026}
+    \end{itemize}
+\item Assembly:
+    \begin{itemize}
+    \item All components fit together and operate in basic expected function
+    \item Due: \textit{30 Oct 2026}
+    \end{itemize}
+\item Endurance testing:
+    \begin{itemize}
+    \item Full system able to withstand operation of firearm
+    \item Due: \textit{13 Nov 2026}
+    \end{itemize}
+\end{itemize}
 
 
+\subsection{Testing}
+Testing will be done in stages. We for all software we will have a suite of unit tests to ensure that
+edge cases are handeled elegantly and primary function is correct. All hardware will be tested on proto-board
+wire ups, then in firm soldered PCB's. Each piece will need to be able to survive a decent amount of impact and 
+final testing will include physical endurance testing to ensure the project is hardy and durable.
 
+\subsection{Task interfaces}
+%What are the important inputs and outputs of each individual component? Define them.
+\textbf{RFID Tag:} An RFID Tag is a small device that contains an antenna. When in the presence of
+a reading antenna it transmit the data stored on it. Typically this data is simple with a communication key
+and an ID number for the reader to compare against its authorized list. This will be the primary input device 
+of the final product.
 
-Describe each task.
-\itemize
-\item "baseline deliverables" -- things you will deliver
-\item "stretch goals" -- things that you are planning to include, but the project will succeed even without them (and why)
-\item What components will be purchased and what will be built?
-\item What resources are needed to complete the tasks? These may be your own, or in a lab, or may be people who will help you.
-\item Task Interfaces: What are the important inputs and outputs of each individual component? Define them.
-\item Testing: How will each task be tested?
-\item Design approach: For each component, how will it be designed? What tools will be used (software, hardware, measurement, etc.)
-\item Current status: What tasks have been finished? What is left to be done?
-\item Schedule: A date when each task will be completed.
-\item Parts: Complete parts list with vendor name and information
+\textbf{Solenoid:} The primary output of the final product will be a linear actuating solenoid. This is
+an electronic device that moves a metal bar. This physical bar is what will block the fire control group 
+of the AR-15.
+
+\textbf{User Updates:} A key feature will be the logging of all tags that attempted to unlock the firearm.
+The project includes generating an exportable list of this log. We will also inlcude the ability for the authorized
+user list to be updated, and change the tags that will allow the operation of the firearm.
+
+\subsection{Design Approach}
+The design of the smart trigger system follows a modular, iterative approach to integrate mechanical, electrical, and software components into the existing AR-15 firing control group. 
+
+\textbf{Hardware and PCB Design:} We are using KiCad for the development of our custom Printed Circuit Board (PCB). This open-source suite allows for precise schematic capture and multi-layer PCB layout, which is necessary to meet the strict spatial constraints of the firearm's grip and receiver. For mechanical housing and the linear actuator interface, we utilize a 3D-modeling toolchain (AutoCAD, Inventor, or SolidWorks) to design parts for additive manufacturing. These tools allow us to verify tolerances before printing, ensuring the solenoid interacts correctly with the hammer and sear.
+
+\textbf{Software Development:} The firmware for the system’s microcontroller is developed in VS Code, utilizing an interrupt-driven state machine to manage power consumption. We will use C/C++ or MicroPython for low-level hardware abstraction, ensuring low-latency communication between the RFID reader and the MCU.
+
+\textbf{Measurement and Validation:} To ensure reliability, we use digital oscilloscopes and logic analyzers to verify signal integrity between the RFID module and the MCU. Mechanical components are validated using precision calipers to ensure the 3D-printed components fit within the standard AR-15 lower receiver without interfering with existing mechanical safeties.
+
+\subsection{Current Status}
+Our team has completed the foundational research and administrative setup necessary for the project’s execution. To date, the following milestones have been achieved:
+
+\begin{itemize}
+    \item \textbf{Infrastructure and Version Control:} A shared Git repository has been established to manage firmware development and LaTeX documentation, ensuring seamless collaboration and version tracking.
+    \item \textbf{Research and Review:} We have completed the initial Research Draft and a secondary analysis of existing market solutions, such as biometric and mechanical FSDs. These drafts underwent both peer and instructor review, leading to the solidification of our RFID-based approach.
+    \item \textbf{Exploratory Prototyping:} We have conducted preliminary experimentation with RFID technology and STM32 microcontrollers during previous laboratory work. While we have not finalized the specific MCU or RFID chipset for the final build, this sandbox testing confirmed the feasibility of the proximity-based authentication required for the ring-tag interface.
+\end{itemize}
+
+\subsection{Stretch Goals}
+While the core project is defined by successful RFID-based blocking of the firing pin, we have identified several stretch goals that would enhance the system’s security and usability:
+
+\begin{itemize}
+    \item \textbf{Mobile Configuration App:} Developing a companion Android application (potentially via Kotlin) that allows users to manage authorized tags, view access logs, and check battery levels over a secure Bluetooth link.
+    \item \textbf{Encrypted Tag Authentication:} Moving from basic UID reading to an encrypted handshake (such as AES-128 or Mifare DESFire) to prevent tag cloning or spoofing attacks.
+    \item \textbf{Haptic Feedback:} Integrating a small vibration motor within the grip to provide the user with tactile confirmation when the system is successfully unlocked, reducing the cognitive load during high-stress scenarios.
+    \item \textbf{Ultra-Low Power Deep Sleep:} Implementing an even more aggressive power management profile that uses an accelerometer to "wake" the system only when the firearm is moved, further extending battery life.
+\end{itemize}

@@ -1,4 +1,22 @@
+Our project has a constraint to fit within a very small space. We will utilize a partially
+distributed integration strategy in order to mesh all of the components together. 
+The primary electronics are an RFID module, a microcontroller unit (MCU), a power supply,
+and a linear actuating solenoid. All components except the solenoid will be housed in the 
+plastic grip for an AR-15. The plastic grip has the benefit of not interfering with the
+RFID signal thus reducing the complexity of a faraday cage effect that could block any 
+electromagnetic signal from being identified. 
 
 
+The solenoid will be housed inside the actual receiver of the AR-15. This separate 
+location allows for the direct blocking of the fire control group. The actuation will be 
+triggered via fine gauge wire passing through one of the holes where the grip physically 
+attaches to the receiver. 
 
-How will the individual tasks/components be integrated? How will the integration be tested?
+
+Power management is one of the most challenging parts of this entire project. The RFID 
+module can consume up to 60mA during its operation and the solenoid up to 200mA. To 
+compensate for these power requirements we will employ an interrupt driven state machine. 
+A low power timer will  periodically activate the RFID module to check for a tag, if one 
+is detected it will activate hardware interrupt on the MCU to check if the tag is 
+authorized. If the tag is in the authorized list the MCU will then actuate the solenoid 
+to remove the block of the fire control group, ultimately allowing the firing of the AR-15.

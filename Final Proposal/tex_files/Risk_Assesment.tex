@@ -1,5 +1,46 @@
+% What are the largest risks to successful demonstration of the project? Describe each risk as green, yellow, or red.  At proposal stage, your goal is to have all risks in the "green" category, that is, you have de-risked any major risks to the project. Describe the de-risking process.
 
+% Risks:
+% - Bringing a gun to a school campus (Red)
+% - Inadequate testing of the smart trigger in real-world scenarios (Yellow)
+% - Potential legal and regulatory issues with the use of the smart trigger (Red)
+% - Pinches and injuries from small moving parts (Yellow)
+% - Negligent discharges (Yellow)
+% - Components break upon use (Green)
+% - Area to place the smart trigger is too small (Green)
 
+% De-risking Process:
+% - For the risk of bringing a gun to a school campus, we won't bring the gun to school, only the smart trigger module.
 
+% Gun Safety:
+% - All team members will receive comprehensive training on the safe handling and storage of the smart trigger.
+% - Regular safety briefings will be conducted to reinforce safe practices.
+% - Follow the four laws of gun safety: (1) Always treat the gun as loaded, (2) Never point the gun at anything you don't want to destroy, (3) Keep your finger off the trigger until you are ready to fire, and (4) Be sure of your target and what's beyond it.
 
-What are the largest risks to successful demonstration of the project? Describe each risk as green, yellow, or red.  At proposal stage, your goal is to have all risks in the "green" category, that is, you have de-risked any major risks to the project. Describe the de-risking process.
+% - For the risk of inadequate testing, we will conduct thorough testing in a variety of real-world scenarios to ensure the smart trigger functions as intended.
+% - For the risk of legal and regulatory issues, we will consult the campus police chief and other relevant authorities to ensure compliance.
+% - For the risk of pinches and injuries from small moving parts, we will wear safety glasses and gloves when appropriate.
+% - For the risk of negligent discharges, we will ensure all testing is done in a safe and controlled environment.
+% - For the risk of components breaking upon use, we will use test each component separately to ensure it can withstand the expected usage and improve the design as needed.
+% - For the risk of an area being too small to place the smart trigger, we will focus on another section of the fire control group to install the smart trigger.
+
+% Intro
+To ensure project success and the safety of all personnel, we have identified and mitigated key risks associated with the development of a smart trigger system. Our methodology involved a comprehensive risk matrix where each hazard was initially categorized as Red (high impact/likelihood), Yellow (moderate), or Green (low). Through a proactive, iterative de-risking process, we have implemented technical and procedural safeguards to transition all identified hazards into the Green category.
+
+% Risks
+\begin{itemize}
+    \item \textbf{Safety and Legal Compliance (Initially Red):} Potential for bringing a functional firearm onto a school campus; non-compliance with state/federal firearm and radio frequency regulations; risk of negligent discharges during testing.
+    \item \textbf{Technical and Operational (Initially Yellow):} Inadequate reliability in real-world environments; mechanical failure of the linear actuator or solenoid; potential for pinch injuries from high-force moving components.
+    \item \textbf{Design and Integration (Initially Green):} Severe spatial constraints within the fire control group; electrical interference between the RFID scanner and the metallic receiver.
+\end{itemize}
+
+% De-risking Process
+\textbf{Campus Safety and Legal Compliance:} The most critical risk identified was the presence of a firearm on school grounds. We have fully de-risked this by utilizing a modular design that excludes the upper receiver, barrel, and firing pin from all on-campus activities. Only the smart trigger assembly and lower receiver are brought to campus for demonstration. This creates a physical impossibility of discharge while allowing for full verification of the electronic lockout. To address regulatory concerns, we are consulting with university police and safety officers to ensure compliance with local statutes. Additionally, as the RFID module is an intentional radiator, we are designing the system to adhere to FCC standards for radio frequency emissions. These combined measures transition these risks to \textbf{Green}.
+
+\textbf{Safe Handling and Negligent Discharge:} To mitigate risks of improper handling, all team members have completed a safety orientation focusing on the four primary laws of firearm safety. This was particularly important as some members began the project with limited firearm experience. All initial functionality testing is conducted in a controlled lab environment without a firearm present. By using an interrupt-driven state machine to manage the 200mA solenoid actuation, we ensure the device only disengages the mechanical block when a validated RFID tag is confirmed, preventing accidental activation. These strict protocols ensure a \textbf{Green} safety rating.
+
+\textbf{Testing and Mechanical Reliability:} To address the risk of component failure, we have implemented a multi-stage validation process. This includes individual stress testing of the solenoid to ensure it can withstand the spring tension of the hammer. Because power management is a primary challenge, with the RFID module and solenoid drawing significant current, we are testing the system's endurance to ensure the battery can reliably actuate the device under repeated use. Field testing in varied environments will further identify potential interference from conductive materials or electromagnetic noise. This ensures the system is robust, moving these concerns to \textbf{Green}.
+
+\textbf{Physical Hazards and Spatial Design:} Potential for minor injuries from moving parts is mitigated through ergonomic housing designs and the use of personal protective equipment (PPE) during assembly. Regarding spatial constraints, the requirement to fit the MCU and power supply within the AR-15 grip is handled through high-fidelity 3D modeling and custom PCB fabrication using KiCad. We utilized precise measurements of the firing control group to ensure that the linear actuator provides the necessary force without interfering with the existing mechanical sear. By verifying these tolerances through detailed prototypes, both risks are confirmed \textbf{Green}.
+
+With these mitigation strategies finalized and integrated into our development cycle, the project is fully de-risked and prepared for a safe demonstration.

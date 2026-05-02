@@ -49,9 +49,11 @@
 
 \usepackage{hyperref}
 \usepackage{color}
+\usepackage{float}
 \usepackage[pdftex]{graphicx}
 \usepackage{amsmath,amssymb,amsfonts,amsxtra}     % various AMS packages for additional math symbols
-
+\usepackage{xurl}
+\usepackage[table,xcdraw]{xcolor}
 
 \nocite{*}
 
@@ -106,6 +108,7 @@
 % Any new command definitions you want to make?
 \newcommand{\pdfarray}[2]{{ \left\{\begin{array}{ll} {#1}, & {#2} \\ 0, & o.w. \end{array}\right. }}
 
+\newcommand{\BibTeX}{BibTex}
 
 
 % correct bad hyphenation here
@@ -132,7 +135,7 @@
 % was not built to handle multiple paragraphs
 %
 
-\author{Andrew Koebbe Student ID: u1450645, Stephen Hofmann Student ID: u11111111,\\ Thomas Stay Student ID: u22222222, Derek Jenkins Student ID: u1506428}% <-this % stops a space
+\author{Andrew Koebbe \textit{Student ID: u1450645}, Stephen Hofmann \textit{Student ID: u1028605},\\ Thomas Stay \textit{Student ID: u1249316}, Derek Jenkins \textit{Student ID: u1506428}}% <-this % stops a space
 
 
 % note the % following the last \IEEEmembership and also \thanks - 
@@ -189,7 +192,12 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-Some people will read this and nothing else. What should they know about your proposal?
+This project proposes a smart trigger for firearms that uses RFID technology to authenticate the user and ensure that only authorized users can fire the gun. 
+This would help to prevent accidental shootings and unauthorized use of firearms, ultimately improving public safety. This paper will discuss solutions already in the market,
+the proposed solution, and the ethical considerations that need to be taken into account when designing and implementing such a system. It will also explore the project and outline
+the tasks that need to be completed in order to successfully implement the smart trigger and demonstrate its functionality at Demo Day. The risks associated with the project will 
+also be assessed and strategies for mitigating those risks will be discussed.
+
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -238,8 +246,11 @@ IEEE, IEEEtran, journal, \LaTeX, paper, template.
 % http://mirror.ctan.org/biblio/bibtex/contrib/doc/
 % The IEEEtran BibTeX style support page is at:
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
+
+\clearpage
+
 \bibliographystyle{IEEEtran}
-\bibliography{bibtex/bib/IEEEexample, bibtex/bib/neal}
+\bibliography{bibtex/bib/IEEEexample}
 %
 
 
