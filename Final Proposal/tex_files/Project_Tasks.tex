@@ -1,9 +1,3 @@
-
-
-
-
-Describe each task.
-
 \subsection{Major Milestones}
 
 \begin{itemize}
@@ -12,53 +6,62 @@ Describe each task.
     \item Full bill of matierals made
     \item Major research complete
     \item Safety pre\-cautions addressed
-    \item Due:
+    \item Due: \textit{03 Aug 2026}
     \end{itemize}
 \item Functional RFID reader:
     \begin{itemize}
     \item Able to read and log tags
     \item Exportable log
-    \item Due:
+    \item Due: \textit{24 Aug 2026}
     \end{itemize}
 \item Application for updating authorized tags:
     \begin{itemize}
     \item User able to update authorized tags without reflashing
-    \item Due:
+    \item Due: \textit{04 Sep 2026}
     \end{itemize}
 \item Successful blocking of fire control:
     \begin{itemize}
     \item Method of blocking the firing of the AR-15 solidified and location confirmed
-    \item Due:
+    \item Due: \textit{11 Sep 2026}
     \end{itemize}
 \item Part fitting:
     \begin{itemize}
     \item Adapting all components into the small form factor required by constraints
-    \item Due:
+    \item Due: \textit{02 Oct 2026}
     \end{itemize}
 \item Assembly:
     \begin{itemize}
     \item All components fit together and operate in basic expected function
-    \item Due:
+    \item Due: \textit{30 Oct 2026}
     \end{itemize}
 \item Endurance testing:
     \begin{itemize}
     \item Full system able to withstand operation of firearm
-    \item Due:
+    \item Due: \textit{13 Nov 2026}
     \end{itemize}
 \end{itemize}
 
 
 \subsection{Testing}
-How will each task be tested
-
-
-\subsection{Purchase, build, borrow}
-What components will be purchased and what will be built?
-What resources are needed to complete the tasks? These may be your own, or in a lab, or may be people who will help you.
-
+Testing will be done in stages. We for all software we will have a suite of unit tests to ensure that
+edge cases are handeled elegantly and primary function is correct. All hardware will be tested on proto-board
+wire ups, then in firm soldered PCB's. Each piece will need to be able to survive a decent amount of impact and 
+final testing will include physical endurance testing to ensure the project is hardy and durable.
 
 \subsection{Task interfaces}
-What are the important inputs and outputs of each individual component? Define them.
+%What are the important inputs and outputs of each individual component? Define them.
+\textbf{RFID Tag:} An RFID Tag is a small device that contains an antenna. When in the presence of
+a reading antenna it transmit the data stored on it. Typically this data is simple with a communication key
+and an ID number for the reader to compare against its authorized list. This will be the primary input device 
+of the final product.
+
+\textbf{Solenoid:} The primary output of the final product will be a linear actuating solenoid. This is
+an electronic device that moves a metal bar. This physical bar is what will block the fire control group 
+of the AR-15.
+
+\textbf{User Updates:} A key feature will be the logging of all tags that attempted to unlock the firearm.
+The project includes generating an exportable list of this log. We will also inlcude the ability for the authorized
+user list to be updated, and change the tags that will allow the operation of the firearm.
 
 \subsection{Design Approach}
 The design of the smart trigger system follows a modular, iterative approach to integrate mechanical, electrical, and software components into the existing AR-15 firing control group. 
