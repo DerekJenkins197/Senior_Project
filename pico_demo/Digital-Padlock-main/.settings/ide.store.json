@@ -1,0 +1,5 @@
+{
+  "board": "STM32F072B-DISCO",
+  "device": "STM32F072RBT6",
+  "toolchain": "GCC"
+}
