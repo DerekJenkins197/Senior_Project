@@ -60,11 +60,15 @@ add_executable(pico_demo
     src/rfid.c
 )
 
-# Text a valid tag string must contain, e.g. -DRFID_VALID_TAG=BEAD1010 (default is in include/rfid.h)
-set(RFID_VALID_TAG "" CACHE STRING "Text a valid RFID tag string must contain")
+# The 10 data chars of the valid tag, e.g. -DRFID_VALID_TAG=BEAD101000 (default is in include/rfid.h)
+set(RFID_VALID_TAG "" CACHE STRING "10 hex data chars of the valid RFID tag")
 if (RFID_VALID_TAG)
     target_compile_definitions(pico_demo PRIVATE RFID_VALID_TAG="${RFID_VALID_TAG}")
 endif()
+
+# RFID self-test without a card: 0 = off, 1 = internal loopback, 2 = jumper GP0 -> GP1 (see include/rfid.h)
+set(RFID_SELFTEST 0 CACHE STRING "RFID self-test mode (0, 1 or 2)")
+target_compile_definitions(pico_demo PRIVATE RFID_SELFTEST=${RFID_SELFTEST})
 
 target_include_directories(pico_demo PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/include
@@ -85,8 +89,8 @@ endif()
 pico_set_program_name(pico_demo "pico_demo")
 pico_set_program_description(pico_demo "SAA1042 stepper stepped by RFID tag (FreeRTOS)")
 
-pico_enable_stdio_uart(pico_demo 0)
-pico_enable_stdio_usb(pico_demo 1)   # USB serial: debug prints, and lets picotool reboot into BOOTSEL
+pico_enable_stdio_uart(pico_demo 1)   # console on GP4 (UART1 TX) for a USB-UART adapter, set up in main.c
+pico_enable_stdio_usb(pico_demo 1)    # USB serial: same prints, and lets picotool reboot into BOOTSEL
 
 # Generates pico_demo.uf2 alongside the .elf
 pico_add_extra_outputs(pico_demo)

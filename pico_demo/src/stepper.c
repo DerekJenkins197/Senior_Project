@@ -10,6 +10,7 @@
 
 static TaskHandle_t led_task_handle;
 static TaskHandle_t stepper_task_handle;
+static volatile bool stepper_running;     // set while the valid RFID tag is on the antenna
 
 static volatile TickType_t led_rx_tick;   // tick of the last RFID UART byte
 static volatile bool led_rx_seen;
@@ -92,17 +93,23 @@ void stepper_set_direction(uint8_t clockwise)
     gpio_put(STEPPER_DIR_PIN, !clockwise);
 }
 
-// Called by the RFID task on a valid tag read
-void stepper_trigger(void)
+// Called by the RFID task when the valid tag arrives: step until stepper_stop()
+void stepper_start(void)
 {
+    stepper_running = true;
     if (stepper_task_handle != NULL) {
         xTaskNotifyGive(stepper_task_handle);
     }
 }
 
-/* Idles until stepper_trigger(), then pulses the clock STEPS_PER_TRIGGER
- * times: high for STEP_PULSE_WIDTH_MS, every STEP_PERIOD_MS. Triggers that
- * arrive while stepping are counted and run afterwards.
+// Called by the RFID task when the valid tag is gone; the current step finishes first
+void stepper_stop(void)
+{
+    stepper_running = false;
+}
+
+/* Idles until stepper_start(), then pulses the clock until stepper_stop():
+ * high for STEP_PULSE_WIDTH_MS, every STEP_PERIOD_MS.
  */
 void stepper_task(void *params)
 {
@@ -113,10 +120,10 @@ void stepper_task(void *params)
     stepper_set_direction(STEPPER_TRIGGER_CW);
 
     while (1) {
-        ulTaskNotifyTake(pdFALSE, portMAX_DELAY);           // wait for a valid RFID read
+        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);            // wait for the valid RFID tag
         TickType_t last_wake = xTaskGetTickCount();
 
-        for (uint32_t step = 1; step <= STEPS_PER_TRIGGER; step++) {
+        for (uint32_t step = 1; stepper_running; step++) {
             gpio_put(STEPPER_CLOCK_PIN, 1);                 // Clock pin high
             xTaskNotifyGive(led_task_handle);               // toggle LED each step
             vTaskDelay(pdMS_TO_TICKS(STEP_PULSE_WIDTH_MS));
