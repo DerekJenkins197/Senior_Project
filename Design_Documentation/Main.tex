@@ -1,0 +1,68 @@
+%% Design Documentation: Project Smart Trigger
+%% Items marked \todo{} render in red and still need team input before submission.
+
+\documentclass[11pt, journal]{IEEEtran}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{float}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{xurl}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, fit, backgrounds, shapes.geometric}
+
+% Draft marker for content the team still needs to confirm or measure.
+% Redefine as \newcommand{\todo}[1]{} to hide all markers for the final build.
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+\title{Project Smart Trigger \\ Design Documentation \\ for ECE/CS 3992}
+
+\author{Andrew Koebbe \textit{Student ID: u1450645}, Stephen Hofmann \textit{Student ID: u1028605},\\ Thomas Stay \textit{Student ID: u1249316}, Derek Jenkins \textit{Student ID: u1506428}}%
+
+\maketitle
+
+\begin{abstract}
+This document describes the design of the Smart Trigger, a modular RFID-based
+access-control system for the AR-15 platform. A passive 125kHz RFID tag worn
+by the authorized user is read by an antenna embedded in a custom 3D-printed
+grip. A Raspberry Pi Pico microcontroller validates the tag against an
+authorized list and drives a micro stepper motor that moves a blocking member
+out of the fire control group. The document covers the system architecture, the
+hardware components and their integration onto a custom PCB, the CAD modeling
+of the grip and actuator mounts, and the firmware processes that tie the system
+together. It closes with a look at how the design could grow through an
+off-device logging server and web application, and what that complexity would
+cost in power, security, and development effort.
+\end{abstract}
+
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}
+
+\section{System Architecture}
+\input{tex_files/System_Architecture.tex}
+
+\section{Hardware Components and Integration}
+\input{tex_files/Hardware_Integration.tex}
+
+\section{CAD Modeling and Design}
+\input{tex_files/CAD_Design.tex}
+
+\section{Software Processes}
+\input{tex_files/Software_Processes.tex}
+
+\section{Conclusion}
+
+\clearpage
+
+\bibliographystyle{IEEEtran}
+\bibliography{bibtex/bib/design}
+
+\end{document}
