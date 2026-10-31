@@ -9,7 +9,32 @@ The mechanical design has three parts:
     prevents the fire control group from releasing the hammer
 \end{enumerate}
 
+To understand the innovation behind the blocking member takes some understanding of the original function of the 
+    AR-15 fire control group(trigger, hammer, sear, and safety). To fire a round the trigger must be pulled, the angle the 
+    trigger is brought to in its movement releases the hold it had on the spring loaded hammer. The freed hammer slams against
+    onto a hook called the disconnector which holds the hammer until the trigger is back to its ready position it was in before 
+    firing the last round. The safety on the AR-15 is a physical barrier to the trigger. When is the safe position the trigger
+    is physically blocked from movement thus preventing the hammer from moving and the overall firing of the gun. The design 
+    of our safety takes advantage of the mechanical blocker of the AR-15's native safety selector. To create the most widely 
+    applicable design we focused on locking the native safety in place until an authorized user is recognized.
+
 \subsection{Component Selection}
+
+\begin{table}[]
+\centering
+\begin{tabular}{rrl}
+\hline
+\multicolumn{1}{|c|}{Part Number} & \multicolumn{1}{l|}{Short Name} & \multicolumn{1}{l|}{Short Description} \\ \hline
+Pi Pico W                         & Pico                            & Microcontroller and central brain      \\
+SAA1042                           & Motor Driver                    & Stepper motor driver                   \\
+RDM6300                           & RFID Reader                     & RFID reader and translator             \\
+ANT1                              & Antenna                         & Custom wound antenna tuned to 125kHz   \\
+M1                                & Motor                           & Stepper motor to rotate shaft          \\
+R1                                & R                               & 47k$\Omega$ resistor                   \\
+C1                                & C                               & 100 nF capacitor                      
+\end{tabular}
+\end{table}
+
 
 
 \subsection{Main Board (PCB)}
