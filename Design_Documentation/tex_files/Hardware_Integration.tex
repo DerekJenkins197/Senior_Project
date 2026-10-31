@@ -43,13 +43,24 @@ C1                                & C                               & 100 nF cap
 
 \subsubsection{Rationale for a Custom PCB}
 
-The project imposed a strict size constraint on the electronics enclosure: the pistol grip measures [insert grip dimensions]. A custom printed circuit board (PCB) would integrate all components listed in Table \ref{tab:Bill_of_Materials} into a compact form. A custom design also offered greater control over the system, since unnecessary components could be removed and only the required circuitry selected from each of the commercial development boards. Finally, a single integrated board would simplify installation for the end user compared with a multi-board assembly.
+The project imposed a strict size constraint on the electronics enclosure: the pistol grip measures [insert grip dimensions]. 
+A custom printed circuit board (PCB) would integrate all components listed in Table \ref{tab:Bill_of_Materials} into a compact form. 
+A custom design also offered greater control over the system, since unnecessary components could be removed and only the required circuitry 
+selected from each of the commercial development boards. 
+Finally, a single integrated board would simplify installation for the end user compared with a multi-board assembly.
 
 \subsubsection{Design Process and Change in Approach}
 
-With these constraints in mind, we began by reverse engineering the RDM6300 RFID module, which serves as the interface between the Raspberry Pi Pico microcontroller and the RFID tag. We recreated the circuit in KiCad, a PCB design tool, and started to validate it through simulation in LTSpice. The resulting design is shown in Figure \ref{fig:PCB_Design_1}. This design would have allowed us to remove the RP2040 from its development board and mount it directly on the custom PCB, eliminating the many GPIO pins we did not intend to use.
+With these constraints in mind, we began by reverse engineering the RDM6300 RFID module, which serves as the interface between the Raspberry Pi Pico microcontroller and the RFID tag. 
+We recreated the circuit in KiCad, a PCB design tool, and started to validate it through simulation in LTSpice. 
+The resulting design is shown in Figure \ref{fig:PCB_Design_1}. 
+This design would have allowed us to remove the RP2040 from its development board and mount it directly on the custom PCB, 
+eliminating the many GPIO pins we did not intend to use.
 
-Before fabricating and testing the board, however, the team questioned whether the fine-pitch leads of the RP2040 could be reliably hand soldered. Commercial manufacturers typically place such components using processes such as stencil-based solder paste application with reflow, or thermocompression bonding, neither of which was available to us. Given the project schedule and the risk of failing to mount the chip, we elected to pursue a simpler design.
+Before fabricating and testing the board, however, the team questioned whether the fine-pitch leads of the RP2040 could be reliably hand soldered. 
+Commercial manufacturers typically place such components using processes such as stencil-based solder paste application with reflow, or 
+thermocompression bonding, neither of which was available to us. Given the project schedule and the risk of failing to mount the chip, we elected 
+to pursue a simpler design.
 
 \subsubsection{Tradeoffs of the Revised Design}
 
