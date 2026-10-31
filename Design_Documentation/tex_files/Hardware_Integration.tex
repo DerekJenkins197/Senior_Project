@@ -22,6 +22,8 @@ To understand the innovation behind the blocking member takes some understanding
 
 \begin{table}[]
 \centering
+\caption{Components in the Smart Trigger system}
+\label{tab:Bill_of_Materials}
 \begin{tabular}{rrl}
 \hline
 \multicolumn{1}{|c|}{Part Number} & \multicolumn{1}{l|}{Short Name} & \multicolumn{1}{l|}{Short Description} \\ \hline
@@ -38,6 +40,22 @@ C1                                & C                               & 100 nF cap
 
 
 \subsection{Main Board (PCB)}
+
+\subsubsection{Rationale for a Custom PCB}
+
+The project imposed a strict size constraint on the electronics enclosure: the pistol grip measures [insert grip dimensions]. A custom printed circuit board (PCB) would integrate all components listed in Table \ref{tab:Bill_of_Materials} into a compact form. A custom design also offered greater control over the system, since unnecessary components could be removed and only the required circuitry selected from each of the commercial development boards. Finally, a single integrated board would simplify installation for the end user compared with a multi-board assembly.
+
+\subsubsection{Design Process and Change in Approach}
+
+With these constraints in mind, we began by reverse engineering the RDM6300 RFID module, which serves as the interface between the Raspberry Pi Pico microcontroller and the RFID tag. We recreated the circuit in KiCad, a PCB design tool, and started to validate it through simulation in LTSpice. The resulting design is shown in Figure \ref{fig:PCB_Design_1}. This design would have allowed us to remove the RP2040 from its development board and mount it directly on the custom PCB, eliminating the many GPIO pins we did not intend to use.
+
+Before fabricating and testing the board, however, the team questioned whether the fine-pitch leads of the RP2040 could be reliably hand soldered. Commercial manufacturers typically place such components using processes such as stencil-based solder paste application with reflow, or thermocompression bonding, neither of which was available to us. Given the project schedule and the risk of failing to mount the chip, we elected to pursue a simpler design.
+
+\subsubsection{Tradeoffs of the Revised Design}
+
+Although each of the existing boards fit within the grip, they would not be held securely in place. We therefore changed the role of the PCB to that of a perfboard-style central hub that interconnects the individual boards. This decision involved several tradeoffs. The perfboard approach retains unused features, including GPIO pins, clock circuitry, and UART pins. The boards must also be arranged to fit within the grip, making the assembly less compact than a custom PCB that integrates their functions. However, this approach required no additional parts, since all components were already in hand, and its lower complexity improved the likelihood of delivering a working product by the deadline.
+
+The current design is shown in Figure \ref{fig:PCB_Design_2}. The board is configured to sandwich the Raspberry Pi Pico microcontroller on one side with the motor driver on the opposite side. The RDM6300 sits directly below the motor driver and is mounted through solder points that accept the short portion of its header pins, forming a compact stack of boards.
 
 \subsection{RFID Board (RDM6300)}
 
