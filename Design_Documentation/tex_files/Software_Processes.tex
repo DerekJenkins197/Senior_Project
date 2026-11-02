@@ -1,15 +1,57 @@
 \label{sec:software}
 
 \subsection{Development Environment}
+The development environment for the firmware is based on the Raspberry Pi Pico SDK (version 2.0 or greater), which provides a comprehensive set of tools and libraries for programming the RP2040 microcontroller on the Raspberry Pi Pico W. The firmware is written in C11 and utilizes the FreeRTOS SMP kernel with Heap 4 memory management to manage tasks and ensure responsive, deterministic performance. Build configuration and cross-compilation are handled via CMake, targeting both USB serial and an independent hardware UART debug interface.
 
 \subsection{Firmware Architecture}
+The firmware architecture is designed to be modular and maintainable, with each component having a specific role and responsibility divided across isolated compilation units (`main.c', `rfid.c', and `stepper.c'). The system is divided into several layers, including the hardware peripheral access layer (Pico SDK hardware drivers), an RTOS task synchronization layer, and the application logic layer. This design allows for easier debugging and maintenance while ensuring that the system remains robust under typical usage scenarios by preventing driver operations from blocking critical timing loops.
 
-\subsection{Control State Machine}
+\subsection{Task Management and Inter-Task Synchronization}
+Rather than relying on a polling super-loop, the firmware implements four concurrent FreeRTOS tasks to manage system states and hardware operations: `rfid\_task', `stepper\_task', `led\_task', and `console\_task'. Inter-task communication and hardware decoupling are handled through kernel synchronization primitives:
+
+\begin{itemize}
+    \item UART Interrupt and Stream Buffer: A dedicated UART interrupt service routine (`rfid\_uart\_irq') drains incoming reader bytes directly from the 32-byte hardware FIFO into an RTOS stream buffer (`rx\_stream'), eliminating byte drops caused by serial print latency in application tasks.
+    \item Task Notifications: When `rfid\_task' validates an authorized tag, it signals `stepper\_task' using lightweight FreeRTOS direct task notifications (`xTaskNotifyGive' and `ulTaskNotifyTake') via `stepper\_start()', and halts rotation with `stepper\_stop()' when the tag is removed.
+    \item Decoupled Actuator and LED Scheduling: `stepper\_task' signals `led\_task' on each completed step pulse via task notifications, decoupling the timing of wireless chip I/O from physical motor control.
+\end{itemize}
+
 
 \subsection{RFID Processing}
+The RFID processing component is responsible for reading and interpreting data from an external RDM6300 125kHz RFID module operating at 9600 baud (8N1) over UART0 on GP1. It handles communication with the reader, processes incoming serial bursts, and determines appropriate actions based on tag information:
+\begin{itemize}
+    \item Frame Demarcation: The parser buffers data bounded by an STX (0x02) start byte and an ETX (0x03) end byte, capturing a 10-character ASCII hex payload and a 2-character checksum.
+    \item Checksum Verification: The module verifies the RDM6300 XOR checksum across the five decoded data bytes before any access evaluation occurs.
+    \item Authentication and Presence Timeout: The decoded tag is matched against a pre-compiled identifier macro (`RFID\_VALID\_TAG', defaulting to EM410x tag `BEAD101000'). If valid, the system maintains trigger activation while tag frames continue to arrive, halting rotation if no valid frame is received within a 500 ms timeout window (`RFID\_GONE\_MS') or if an unauthorized tag is detected.
+\end{itemize}
 
 \subsection{Actuator Control}
+The actuator control component manages the physical operation of an Abovehill 8 mm micro stepper motor driven by an SAA1042 stepper controller IC in half-step mode (20 full steps/rev). It receives commands from `rfid\_task' and translates them into specific actions:
+\begin{itemize}
+    \item Pulse Generation: `stepper\_task' outputs a 10 ms active-high step pulse (`STEP\_PULSE\_WIDTH\_MS') on GP22.
+    \item Deterministic Periodicity: Pulse cadence is locked to a 100 ms interval (`STEP\_PERIOD\_MS') using `vTaskDelayUntil', providing consistent mechanical stepping without timing drift.
+    \item Directional Control: Direction is set to clockwise (`STEPPER\_TRIGGER\_CW') by asserting GP21 prior to stepping.
+\end{itemize}
 
-\subsection{Software Testing}
+\subsection{Hardware Interface and Pad Configuration}
+The firmware directly addresses the physical electrical constraints of the peripheral components:
+\begin{itemize}
+    \item 5V to 3.3V Logic Interfacing: Because the RDM6300 module transmits at 5V and RP2040 GPIO pads tolerate a maximum of 3.3V, serial data is received through a 2k$\Omega$ series resistor on GP1, with dynamic software pull-downs configured for connection diagnostics.
+    \item Slew Rate and Pad Drive Strength: To ensure clean switching thresholds across the SAA1042 input logic, GP21 (direction) and GP22 (clock) are programmed for fast slew rates and an increased 12 mA drive strength.
+    \item CYW43 Bus Isolation: On the Raspberry Pi Pico W, the onboard status LED is driven via the Infineon CYW43439 wireless chip over a shared internal bus. Because communicating with the CYW43 involves SPI transactions that introduce timing latency, LED state changes are isolated to a dedicated low-priority background task (`led\_task'), preventing motor step jitter.
+\end{itemize}
 
-\subsection{Expansion: Logging Server and Web Application}
+\subsection{Software Testing and Hardware Diagnostics}
+Testing and diagnostic instrumentation are integrated directly into the firmware architecture:
+\begin{itemize}
+    \item Integrated Self-Test Modes: Using the `RFID\_SELFTEST' build flag, the firmware can run full automated regression tests without physical tags. Mode 1 activates the internal hardware UART loopback inside the RP2040 (`UART\_UARTCR\_LBE\_BITS'), while Mode 2 configures GP0 as an external transmitter jumpered to GP1 to test pad and trace continuity. A synthetic test task (`rfid\_test\_task') transmits alternating valid and invalid framed packets every 2000 ms to verify checksum logic and driver triggering.
+    \item Line State and Bus Diagnostics: A periodic diagnostics routine polls the physical line state of GP1 and reports hardware-level UART errors, tracking framing errors, line breaks, and FIFO overruns on the debug console.
+    \item Telemetry Console: Diagnostic logging is broadcast over a dedicated secondary UART (UART1 on GP4 at 115200 baud) and concurrent USB CDC serial (`stdio\_usb'), isolating debug telemetry from the RFID module interface.
+\end{itemize}
+
+\subsection{Future Work: Networking and Telemetry Integration}
+The Smart Trigger system architecture is prepared for expansion into network telemetry and centralized access auditing using the onboard CYW43439 wireless chip of the Raspberry Pi Pico W. While the present implementation links `pico\_cyw43\_arch\_sys\_freertos' strictly for onboard LED control with the lwIP stack disabled (`CYW43\_LWIP=0'), the underlying FreeRTOS environment is already structured to support networking. Transitioning to an active network node requires:
+\begin{enumerate}
+    \item Enabling the lwIP TCP/IP stack (`CYW43\_LWIP=1') within the CMake build target to enable socket-level networking.
+    \item Implementing a secure FreeRTOS client task (using MQTT over TLS or HTTPS) to publish access logs, timestamped valid reads, and tamper/break alerts to an offloaded database server.
+    \item Deploying a web service dashboard to authenticate administrators and permit remote over-the-air updates to the authorized tag whitelist (`RFID\_VALID\_TAG').
+\end{enumerate}
