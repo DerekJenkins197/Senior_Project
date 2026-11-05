@@ -31,26 +31,13 @@
 \maketitle
 
 \begin{abstract}
-This document describes the design of the Smart Trigger, a modular RFID-based
-access-control system for the AR-15 platform. A passive 125kHz RFID tag worn
-by the authorized user is read by an antenna embedded in a custom 3D-printed
-grip. A Raspberry Pi Pico microcontroller validates the tag against an
-authorized list and drives a micro stepper motor that moves a blocking member
-out of the fire control group. The document covers the system architecture, the
-hardware components and their integration onto a custom PCB, the CAD modeling
-of the grip and actuator mounts, and the firmware processes that tie the system
-together. It closes with a look at how the design could grow through an
-off-device logging server and web application, and what that complexity would
-cost in power, security, and development effort.
+\input{tex_files/Abstract.tex}
 \end{abstract}
 
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}
 \input{tex_files/Introduction.tex}
-
-\section{Related Work}
-\input{tex_files/Related_Work}
 
 \section{System Architecture}
 \input{tex_files/System_Architecture.tex}
@@ -63,6 +50,9 @@ cost in power, security, and development effort.
 
 \section{Software Processes}
 \input{tex_files/Software_Processes.tex}
+
+\section{Related Work}
+\input{tex_files/Related_Work}
 
 \section{Conclusion}
 \input{tex_files/Conclusion.tex}
