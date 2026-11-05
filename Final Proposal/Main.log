@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.30)  1 MAY 2026 22:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.30)  4 NOV 2026 14:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -398,7 +398,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 
 ]) (./tex_files/Related_Work.tex
-Underfull \hbox (badness 3049) in paragraph at lines 1--2
+Underfull \hbox (badness 3049) in paragraph at lines 1--9
 []\OT1/ptm/m/n/11 Radio fre-quency iden-ti-fi-ca-tion (RFID) has been
  []
 
@@ -466,7 +466,7 @@ Here is how much of TeX's memory you used:
  40329 multiletter control sequences out of 15000+600000
  671780 words of font info for 125 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 75i,10n,83p,1074b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,83p,1058b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 Output written on Main.pdf (8 pages, 387699 bytes).
 PDF statistics:
