@@ -1,0 +1,24 @@
+The Smart Trigger adds a technical authorization step to the AR-15 
+without changing how the firearm itself operates. A passive 125kHz RFID
+tag worn by the authorized user is read by a custom wound antenna mounted
+on the grip. An RDM 6300 module passes the tag ID to the Raspberry Pi Pico W
+over UART, and the Pico signals to a micro stepper motor through the SAA1042
+driver in order to lock or release the native AR-15 safety selector. Because
+the design works with the safety selector that every AR-15 already has, it
+can be applied to a wide range of rifles without modifying the lower receiver.
+
+Several of our design decisions came down to balancing ideal conditions with
+what we could reliably build on our schedule. A fully integrated custom PCB with
+the RP2040 mounted directly would have been the most compact option, but the
+risk of hand soldering its micro-leads influenced us to use the Pico W board.
+Our PCB implementation then serves as a glorified breadboard that connects 
+the Pi Pico W, the RDM6300, the SAA1042, the stepper motor, 9V battery, voltage
+regulator, and the antenna all together in a 3-board stack that is compact
+enough to fit inside the grip. Designing and printing our own grip in PLA gave
+us control over the fit and feel of the final product, and allowed us to iterate
+quickly over different designs. For our software design, we built our code on
+FreeRTOS to keep RFID processing and motor control as parallel tasks. When a
+secure and valid tag is read over UART, we trigger the motor driver
+appropriately to unlock the AR-15's safety selector. This is our complete
+system design that acheives a supplementory, technical authorization step to
+safely operating the AR-15 rifle.
