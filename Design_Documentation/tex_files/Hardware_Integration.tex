@@ -85,15 +85,48 @@ accept the short portion of its header pins, forming a compact stack of boards.
 
 \subsection{RFID Board (RDM6300)}
 
-\begin{figure} [h]
+\subsubsection{How RFID Technology Works}
+
+ RFID (Radio Frequency Identification) requires two components to communicate: a reader and a tag. 
+ The reader consists of an antenna and a transceiver, while the tag consists of an antenna and a 
+ transponder \cite{kaur2011rfid}. Tags are classified as either active or passive. An active tag 
+ contains a battery and can transmit its signal over long distances, whereas a passive tag has no 
+ battery and can transmit only when it is within range of a reader. The reader’s antenna emits a 
+ radio frequency signal that powers the passive tag, and the strength of this signal depends on the 
+ number of coil turns in the antenna. Once powered, the tag transmits its unique ID back to the reader. 
+ The reader then decodes this signal and forwards it to a microcontroller for processing.
+
+\subsubsection{How we implemented RFID in our system}
+
+ \begin{figure} [h]
     \centering
     \includegraphics[width=0.5\textwidth]{Images/RDM6300_V.pdf}
     \caption{A flow diagram of the RDM6300 RFID module. The module reads the RFID tag and translates its signal into a UART serial output for the Raspberry Pi Pico.}
     \label{fig:RDM6300_Flowchart}
 \end{figure}
 
+ This project uses a passive tag because the system does not require long-range communication, and passive tags are lower in cost 
+ and power consumption. The reader antenna is custom wound and tuned to 125 kHz. The accepted tag IDs are currently hardcoded in the 
+ firmware. When a tag enters the reader’s range, the RDM6300 module reads the tag and converts its signal into a UART serial output, 
+ which is sent to the Raspberry Pi Pico. The Pico compares the received tag ID against the list of accepted IDs. If the ID matches, 
+ the Pico signals the motor driver to unlock the safety. If the ID is not accepted, no action is taken and the safety remains locked. 
+ This process is illustrated in Figure \ref{fig:RDM6300_Flowchart}.
 
 
 \subsection{Micro Stepper Motor \& Driver Board (SAA1042)}
 
-\subsection{Integration and Test Plan}
+Stepper motors are a type of brushless DC motor that rotates when a current is driven into the motor
+What seperates this motor from a standard DC motor is that the rotations of a stepper motor happpen in discrete steps. 
+Whereas a stand motor will rotate continuously when a current is applied. There are essentially two types of stepper motors, Permanent Magnet which creates
+its rotation by using forces created by the interaction of a permanent magnet and an electromagnet. The other type of stepper motor is the Variable-reluctance steppper motor
+. This motor does not use a permanent magnet but relies soley on the electromagnetic forces to create rotation. 
+
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/Stepper_Motor_Diagram.png}
+    \caption{A flow diagram of the stepper motor and driver board.}
+    \label{fig:Stepper_Motor_Flowchart}
+\end{figure}
+
+The motor we use for our design is a [Insert motor type here] stepper motor. ]
+
