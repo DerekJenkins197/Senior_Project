@@ -102,7 +102,8 @@ accept the short portion of its header pins, forming a compact stack of boards.
 
  \begin{figure} [h]
     \centering
-    \includegraphics[width=\columnwidth]{Images/RDM6300_V.pdf}
+    % trim crops the PDF's white margins so the diagram can be 25% larger and still fit the column
+    \includegraphics[trim=162 27 102 10, clip, width=0.76\columnwidth]{Images/RDM6300_V.pdf}
     \caption{A flow diagram of the RDM6300 RFID module. The module reads the RFID tag and translates its signal into a UART serial output for the Raspberry Pi Pico.}
     \label{fig:RDM6300_Flowchart}
 \end{figure}
